@@ -28,6 +28,12 @@ Route::get('/nuevalista', function () {
     return view('nuevalista');
 });
 
+use App\Http\Controllers\NegocioController;
+Route::resource('negocio', NegocioController::class);
+
+use App\Http\Controllers\UsuarioController;
+Route::resource('usuario', UsuarioController::class);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

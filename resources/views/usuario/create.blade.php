@@ -5,13 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Nueva Cita</div>
+                <div class="card-header">Nuevo Usuario</div>
                 <div class="card-body">
-                    <form action="{{ route('citas.store') }}" method="POST">
+                    <form action="{{ route('usuario.store') }}" method="POST">
                         @csrf
-                        @include('cita.form')
+                        @include('usuario.form')
                         <button type="submit" class="btn btn-primary">Guardar</button>
-                        <a href="{{ route('citas.index') }}" class="btn btn-secondary">Volver</a>
+                        <a href="{{ route('usuario.index') }}" class="btn btn-secondary">Volver</a>
                     </form>
                 </div>
             </div>
